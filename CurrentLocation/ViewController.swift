@@ -35,6 +35,9 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         }
     }
     
+    @IBAction func stopButton(_ sender: Any) {
+        locationManager.stopUpdatingLocation()
+    }
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         let userLocations = locations[0] as CLLocation
         
